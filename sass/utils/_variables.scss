@@ -1,0 +1,42 @@
+$color-primary-base: #007fb6;
+$color-primary-light: #4ab0f7;
+$color-primary-dark: #11588b;
+
+$color-secondary-base: #111111;
+$color-secondary-light: #222222;
+$color-secondary-dark: #000000;
+
+$white: #fefefe;
+$black: #111111;
+$grey: #eeeeee;
+$red: #ab3c35;
+$blue: #0d6db1;
+$green: #49ab39;
+$yellow: #d7b334;
+
+$rounded-small: 3px;
+$rounded-normal: 6px;
+$rounded-big: 12px;
+$circle: 50%;
+
+$font-primary: 'Lato';
+$font-secondary: 'Lato';
+
+$font-size-base: calc(4px + .9vw);
+$font-size-smallest: .5em;
+$font-size-tiny: .7em;
+$font-size-small: .85em;
+$font-size-normal: 1em;
+$font-size-big: 1.15em;
+$font-size-huge: 1.3em;
+$font-size-biggest: 1.45em;
+
+$transition-fast: .3s;
+$transition-normal: .9s;
+$transition-slow: 2.7s;
+
+$box-shadow-far: 0 0 25px rgba(0, 0, 0, 0.3);
+$box-shadow-average: 0 0 17px rgba(0, 0, 0, 0.32);
+$box-shadow-close: 0 0 10px rgba(0, 0, 0, 0.4);
+
+$fa-font-path: "vendor/webfonts";
