@@ -44,7 +44,7 @@
   position: fixed;
   margin: 1.5em;
   background-color: $white;
-  border-radius: 50%;
+  border-radius: $circle;
   border: none;
   box-shadow: $box-shadow-close;
   z-index: 3;
@@ -111,7 +111,7 @@
     box-shadow: $box-shadow-close;
     cursor: pointer;
     transition: $transition-fast;
-    font-size: $font-size-big;
+    font-size: $font-size-huge;
 
     &:hover{
       opacity: 1;
