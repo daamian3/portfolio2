@@ -139,8 +139,13 @@
     cursor: pointer;
     position: relative;
     @include flexbox(row, flex-start, center);
-    @include padding-box('big');
+    // @include padding-box('big');
     transition: $transition-fast;
+
+    & > a {
+      @include padding-box('big');
+      width: 100%;
+    }
 
     &:hover{
       background-color: $color-primary-base;
@@ -163,4 +168,27 @@
 
 .section1{
   height: 100vh;
+}
+
+.section {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  font-size: $font-size-huge;
+
+  &__container { 
+    @include flexbox(column, center, center, nowrap);
+    @include margin-box('huge');
+    text-align: center;
+  }
+
+  &__header {
+    text-transform: uppercase;
+    width: 25%;
+  }
+
+  &__content {
+    width: 75%;
+    line-height: 2;
+    letter-spacing: 3px;
+  }
 }

@@ -22,7 +22,7 @@
   }
   @else if $position == 'horizontal' {
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
   }
   @else {
     top: 50%;
