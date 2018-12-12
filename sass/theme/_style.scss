@@ -44,7 +44,7 @@
   position: fixed;
   margin: 1.5em;
   background-color: $white;
-  border-radius: $circle;
+  border-radius: 50%;
   border: none;
   box-shadow: $box-shadow-close;
   z-index: 3;
@@ -111,7 +111,7 @@
     box-shadow: $box-shadow-close;
     cursor: pointer;
     transition: $transition-fast;
-    font-size: $font-size-huge;
+    font-size: $font-size-big;
 
     &:hover{
       opacity: 1;
@@ -161,6 +161,101 @@
   }
 }
 
-.section1{
-  height: 100vh;
+.services{
+  padding: 2rem;
+
+  &__flex{
+    @include flexbox(row, space-around, center, wrap);
+  }
+
+  &__block{
+    background-color: $grey;
+    width: 12%;
+    min-width: 175px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: $box-shadow-close;
+    transition: $transition-fast;
+    position: relative;
+
+    &:hover{
+      box-shadow: $box-shadow-far;
+    }
+
+    &:first-child{
+      width: 15%;
+      box-shadow: none;
+      border-radius: 0;
+
+      &:hover{
+        box-shadow: none;
+      }
+    }
+
+    &:nth-child(3) .services--title{
+      background-color: #bbbbbb;
+
+      &::after{
+        content: '\f005';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        font-family: 'Font Awesome 5 Free';
+        color: #8f4922;
+        font-size: 2rem;
+      }
+    }
+
+    &:nth-child(4) .services--title{
+      background-color: #aaaaaa;
+
+      &::after{
+        content: '\f005';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        font-family: 'Font Awesome 5 Free';
+        color: grey;
+        font-size: 2rem;
+      }
+    }
+
+    &:nth-child(5) .services--title{
+      background-color: #999999;
+
+      &::after{
+        content: '\f005';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        font-family: 'Font Awesome 5 Free';
+        color: gold;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__li{
+    padding: 1rem 1rem;
+  }
+
+  &--title{
+    font-weight: lighter;
+    font-size: $font-size-biggest;
+    letter-spacing: 2px;
+    padding-top: 1rem;
+  }
+
+  &--price{
+    font-size: $font-size-huge;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    padding-bottom: 1rem;
+  }
 }

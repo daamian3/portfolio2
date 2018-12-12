@@ -6832,7 +6832,7 @@ template {
 
 html, body {
 		font-family: "Lato";
-		font-size: calc(6px + .75vw);
+		font-size: calc(12px + .4vw);
 		color: #111111; }
 
 a {
@@ -7035,7 +7035,7 @@ ul {
 				box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 				cursor: pointer;
 				transition: 0.3s;
-				font-size: 1.3em; }
+				font-size: 1.15rem; }
 				.header__scroll:hover {
 						opacity: 1;
 						transform: translateY(5px); }
@@ -7074,5 +7074,76 @@ ul {
 				height: 1em;
 				margin-right: 1em; }
 
-.section1 {
-		height: 100vh; }
+.services {
+		padding: 2rem; }
+		.services__flex {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				flex-wrap: wrap; }
+		.services__block {
+				background-color: #eeeeee;
+				width: 12%;
+				min-width: 175px;
+				text-align: center;
+				border-radius: 0 0 20px 20px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+				transition: 0.3s;
+				position: relative; }
+				.services__block:hover {
+						box-shadow: 0 0 25px rgba(0, 0, 0, 0.3); }
+				.services__block:first-child {
+						width: 15%;
+						box-shadow: none;
+						border-radius: 0; }
+						.services__block:first-child:hover {
+								box-shadow: none; }
+				.services__block:nth-child(3) .services--title {
+						background-color: #bbbbbb; }
+						.services__block:nth-child(3) .services--title::after {
+								content: '\f005';
+								display: block;
+								position: absolute;
+								top: 0;
+								right: 0;
+								transform: translate(50%, -50%);
+								font-family: 'Font Awesome 5 Free';
+								color: #8f4922;
+								font-size: 2rem; }
+				.services__block:nth-child(4) .services--title {
+						background-color: #aaaaaa; }
+						.services__block:nth-child(4) .services--title::after {
+								content: '\f005';
+								display: block;
+								position: absolute;
+								top: 0;
+								right: 0;
+								transform: translate(50%, -50%);
+								font-family: 'Font Awesome 5 Free';
+								color: grey;
+								font-size: 2rem; }
+				.services__block:nth-child(5) .services--title {
+						background-color: #999999; }
+						.services__block:nth-child(5) .services--title::after {
+								content: '\f005';
+								display: block;
+								position: absolute;
+								top: 0;
+								right: 0;
+								transform: translate(50%, -50%);
+								font-family: 'Font Awesome 5 Free';
+								color: gold;
+								font-size: 2rem; }
+		.services__li {
+				padding: 1rem 1rem; }
+		.services--title {
+				font-weight: lighter;
+				font-size: 1.5rem;
+				letter-spacing: 2px;
+				padding-top: 1rem; }
+		.services--price {
+				font-size: 1.3rem;
+				letter-spacing: 2px;
+				font-weight: lighter;
+				padding-bottom: 1rem; }
