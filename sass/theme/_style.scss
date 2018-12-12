@@ -180,6 +180,10 @@
 
     &:hover{
       box-shadow: $box-shadow-far;
+
+      .services--title::after{
+        text-shadow: $box-shadow-far !important;
+      }
     }
 
     &:first-child{
@@ -205,6 +209,8 @@
         font-family: 'Font Awesome 5 Free';
         color: #8f4922;
         font-size: 2rem;
+        text-shadow: $box-shadow-close;
+        transition: $transition-fast;
       }
     }
 
@@ -221,6 +227,8 @@
         font-family: 'Font Awesome 5 Free';
         color: grey;
         font-size: 2rem;
+        text-shadow: $box-shadow-close;
+        transition: $transition-fast;
       }
     }
 
@@ -237,6 +245,8 @@
         font-family: 'Font Awesome 5 Free';
         color: gold;
         font-size: 2rem;
+        text-shadow: $box-shadow-close;
+        transition: $transition-fast;
       }
     }
   }

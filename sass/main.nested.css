@@ -7093,6 +7093,8 @@ ul {
 				position: relative; }
 				.services__block:hover {
 						box-shadow: 0 0 25px rgba(0, 0, 0, 0.3); }
+						.services__block:hover .services--title::after {
+								text-shadow: 0 0 25px rgba(0, 0, 0, 0.3) !important; }
 				.services__block:first-child {
 						width: 15%;
 						box-shadow: none;
@@ -7110,7 +7112,9 @@ ul {
 								transform: translate(50%, -50%);
 								font-family: 'Font Awesome 5 Free';
 								color: #8f4922;
-								font-size: 2rem; }
+								font-size: 2rem;
+								text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+								transition: 0.3s; }
 				.services__block:nth-child(4) .services--title {
 						background-color: #aaaaaa; }
 						.services__block:nth-child(4) .services--title::after {
@@ -7122,7 +7126,9 @@ ul {
 								transform: translate(50%, -50%);
 								font-family: 'Font Awesome 5 Free';
 								color: grey;
-								font-size: 2rem; }
+								font-size: 2rem;
+								text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+								transition: 0.3s; }
 				.services__block:nth-child(5) .services--title {
 						background-color: #999999; }
 						.services__block:nth-child(5) .services--title::after {
@@ -7134,7 +7140,9 @@ ul {
 								transform: translate(50%, -50%);
 								font-family: 'Font Awesome 5 Free';
 								color: gold;
-								font-size: 2rem; }
+								font-size: 2rem;
+								text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+								transition: 0.3s; }
 		.services__li {
 				padding: 1rem 1rem; }
 		.services--title {
