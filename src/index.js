@@ -7,5 +7,5 @@ $(window).on("load", function () {
   loaded();
   active();
   scroll();
-  console.log('Yeah!!! It work!');
+  console.log('It works from here');
 });
