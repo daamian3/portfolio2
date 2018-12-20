@@ -7,7 +7,7 @@ var sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 
 var input = './sass/**/*.scss';
-var output = '/';
+var output = './';
 
 gulp.task('sass', function () {
   return gulp.src(input)
