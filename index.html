@@ -21,30 +21,30 @@
       <ul class="menu">
         <li class="menu__button">
 
-          <a href="#section1">
+          <a href="#intro">
             <i class="fas fa-home menu__icon"></i>
-            <span class="menu__span">Nagłówek</span>
+            <span class="menu__span">O nas</span>
           </a>
         </li>
 
         <li class="menu__button">
-          <a href="#section2">
+          <a href="#why">
             <i class="fas fa-desktop menu__icon"></i>
-            <span class="menu__span">Wstęp</span>
+            <span class="menu__span">Zespół</span>
           </a>
         </li>
 
         <li class="menu__button">
-          <a href="#section3">
+          <a href="#demos">
             <i class="fas fa-users menu__icon"></i>
-            <span class="menu__span">Rozwinięcie</span>
+            <span class="menu__span">Projekty</span>
           </a>
         </li>
 
         <li class="menu__button">
-          <a href="#section4">
+          <a href="#services">
             <i class="fas fa-file menu__icon"></i>
-            <span class="menu__span">Zakończenie</span>
+            <span class="menu__span">Usługi</span>
           </a>
         </li>
 
@@ -70,68 +70,57 @@
       <i class="fas fa-chevron-circle-down header__scroll"></i>
     </header>
 
-    <section class="section1" id="section1">
-    </section>
+    <section class="section section1 section--intro" id="intro"></section>
 
-    <section class="section2" id="section2">
-    </section>
+   <section class="section section2 section--why" id="why"></section>
 
-    <section class="section3" id="section3">
-    </section>
+   <section class="section section3 section--how" id="how"></section>
 
-    <section class="section4" id="section4">
-    </section>
+   <section class="section section4 section--demos" id="demos"></section>
+
+   <section class="section section5 section--contact" id="contact"></section>
 
     <section class="services" id="services">
       <div class="services__flex">
+
         <ul class="services__block">
-          <li class="services__li services--title">Typ witryny</li>
+          <li class="services__li services--title">One page</li>
+          <li class="services__li services--feature">Domena + hosting</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--price">od 200 zł</li>
+        </ul>
+
+        <ul class="services__block">
+          <li class="services__li services--title">Witryna</li>
+          <li class="services__li services--feature">Domena + hosting</li>
+          <li class="services__li services--feature">Podstrony</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--price">od 300 zł</li>
+        </ul>
+
+        <ul class="services__block">
+          <li class="services__li services--title">Serwis</li>
+          <li class="services__li services--feature">Domena + hosting</li>
+          <li class="services__li services--feature">Podstrony</li>
+          <li class="services__li services--feature">Opcja edycji (CMS)</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--price">od 500 zł</li>
+        </ul>
+
+        <ul class="services__block">
+          <li class="services__li services--title">Aplikacja</li>
           <li class="services__li services--feature">Domena + hosting</li>
           <li class="services__li services--feature">Podstrony</li>
           <li class="services__li services--feature">Opcja edycji (CMS)</li>
           <li class="services__li services--feature">Panel administratora</li>
           <li class="services__li services--feature">Rejestracja & Logowanie</li>
-          <li class="services__li services--price">Cena</li>
-        </ul>
-
-        <ul class="services__block">
-          <li class="services__li services--title">One page</li>
-          <li class="services__li services--feature">+</li>
-          <li class="services__li services--feature">-</li>
-          <li class="services__li services--feature">-</li>
-          <li class="services__li services--feature">-</li>
-          <li class="services__li services--feature">-</li>
-          <li class="services__li services--price">200 zł</li>
-        </ul>
-
-        <ul class="services__block">
-          <li class="services__li services--title">Witryna</li>
-          <li class="services__li services--feature">+</li>
-          <li class="services__li services--feature">+</li>
-          <li class="services__li services--feature">+</li>
-          <li class="services__li services--feature">-</li>
-          <li class="services__li services--feature">-</li>
-          <li class="services__li services--price">500 zł</li>
-        </ul>
-
-        <ul class="services__block">
-          <li class="services__li services--title">Serwis</li>
-          <li class="services__li services--feature">+</li>
-          <li class="services__li services--feature">+</li>
-          <li class="services__li services--feature">+</li>
-          <li class="services__li services--feature">-</li>
-          <li class="services__li services--feature">-</li>
-          <li class="services__li services--price">1000 zł</li>
-        </ul>
-
-        <ul class="services__block">
-          <li class="services__li services--title">Aplikacja</li>
-          <li class="services__li services--feature">+</li>
-          <li class="services__li services--feature">+</li>
-          <li class="services__li services--feature">+</li>
-          <li class="services__li services--feature">+</li>
-          <li class="services__li services--feature">+</li>
-          <li class="services__li services--price">2000 zł</li>
+          <li class="services__li services--price">od 1000 zł</li>
         </ul>
       </div>
     </section>
@@ -144,6 +133,7 @@
   <script src="scripts/jquery.min.js"></script>
   <script src="scripts/loader.js"></script>
   <script src="scripts/smooth_scroll.js"></script>
+  <script src="scripts/menu_scroll.js"></script>
 </body>
 
 </html>

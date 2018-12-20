@@ -171,7 +171,8 @@
 
   &__block{
     background-color: $grey;
-    width: 12%;
+    width: 15rem;
+    margin: 1rem;
     min-width: 175px;
     text-align: center;
     border-radius: 0 0 20px 20px;
@@ -187,17 +188,7 @@
       }
     }
 
-    &:first-child{
-      width: 15%;
-      box-shadow: none;
-      border-radius: 0;
-
-      &:hover{
-        box-shadow: none;
-      }
-    }
-
-    &:nth-child(3) .services--title{
+    &:nth-child(2) .services--title{
       background-color: #bbbbbb;
 
       &::after{
@@ -215,7 +206,7 @@
       }
     }
 
-    &:nth-child(4) .services--title{
+    &:nth-child(3) .services--title{
       background-color: #aaaaaa;
 
       &::after{
@@ -233,7 +224,7 @@
       }
     }
 
-    &:nth-child(5) .services--title{
+    &:nth-child(4) .services--title{
       background-color: #999999;
 
       &::after{
