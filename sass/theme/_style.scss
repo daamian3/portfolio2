@@ -90,6 +90,7 @@
     background: -webkit-linear-gradient(bottom left, $color-primary-light, #ffcd83);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   &__flex{
