@@ -1,13 +1,13 @@
 'use strict';
 
-const gulp = require('gulp');
-const rename = require('gulp-rename');
-const sass = require('gulp-sass');
+var gulp = require('gulp');
+var rename = require('gulp-rename');
+var sass = require('gulp-sass');
 
 sass.compiler = require('node-sass');
 
-const input = './sass/**/*.scss';
-const output = './';
+var input = './sass/**/*.scss';
+var output = '/';
 
 gulp.task('sass', function () {
   return gulp.src(input)

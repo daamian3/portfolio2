@@ -1,4 +1,6 @@
-(function () {
+import $ from 'jquery';
+
+function active() {
   const $menuButtons = $('.menu__button');
 
   $menuButtons.each(function () {
@@ -8,4 +10,6 @@
       $(this).addClass('active');
     })
   })
-})();
+}
+
+export default active;
