@@ -16,7 +16,7 @@ gulp.task('sass', function () {
       outputStyle: 'compressed'
     }))
     .on('error', sass.logError)
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(rename('./style.min.css'))
     .pipe(gulp.dest(output));
 });
 
