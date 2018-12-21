@@ -7,7 +7,7 @@
     "build": "webpack",
     "webpack": "webpack --watch --mode development",
     "sass": "gulp sass && gulp sass:watch",
-    "dev": "concurrently \"npm run webpack\" \"npm run sass\"",
+    "dev": "concurrently \"npm run sass\" \"npm run webpack\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,6 +29,7 @@
     "gulp": "^4.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
+    "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "webpack": "^4.28.1",
