@@ -1,13 +1,13 @@
 'use strict';
 
-const gulp = require('gulp');
-const rename = require('gulp-rename');
-const sass = require('gulp-sass');
+var gulp = require('gulp');
+var rename = require('gulp-rename');
+var sass = require('gulp-sass');
 
 sass.compiler = require('node-sass');
 
-const input = './sass/**/*.scss';
-const output = './';
+var input = './sass/main.scss';
+var output = './';
 
 gulp.task('sass', function () {
   return gulp.src(input)
@@ -16,10 +16,10 @@ gulp.task('sass', function () {
       outputStyle: 'compressed'
     }))
     .on('error', sass.logError)
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(rename('./style.min.css'))
     .pipe(gulp.dest(output));
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch(input, gulp.series('sass'));
+  gulp.watch('./sass/**/*.scss', gulp.series('sass'));
 });

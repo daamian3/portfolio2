@@ -162,8 +162,54 @@
   }
 }
 
+// Sections
+.section {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  font-size: $font-size-huge;
+
+  &__container { 
+    @include flexbox(column, center, center, nowrap);
+    @include margin-box('huge');
+    text-align: center;
+  }
+
+  &__header {
+    text-transform: uppercase;
+  }
+
+  &__content {
+    width: 75%;
+    line-height: 2;
+    letter-spacing: 3px;
+  }
+}
+
+.section--intro {
+  .section__container {
+    width: 50%;
+    @include margin-auto();
+    border-top: 2px solid $grey;
+    border-bottom: 2px solid $grey;
+  }
+  
+  .section__header {
+    line-height: 2em;
+    letter-spacing: 0.2em;
+  }
+}
+
+
+
+
 .services{
   padding: 2rem;
+
+  &__header {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 1em;
+  }
 
   &__flex{
     @include flexbox(row, space-around, center, wrap);
