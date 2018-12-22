@@ -175,6 +175,7 @@
 
   &__header {
     text-transform: uppercase;
+    text-align: center;
   }
 
   &__content {
@@ -202,19 +203,13 @@
 
 
 .services{
-  padding: 2rem;
-
-  &__header {
-    text-align: center;
-    text-transform: uppercase;
-    padding-bottom: 1em;
-  }
-
   &__flex{
+    padding-top: 2rem;
     @include flexbox(row, space-around, center, wrap);
   }
 
   &__block{
+    font-size: $font-size-base;
     background-color: $grey;
     width: 15rem;
     margin: 1rem;
