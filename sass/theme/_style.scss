@@ -379,7 +379,6 @@
     position: relative;
 
     &:hover p {
-      opacity: 1;
       transform: translateY(-50%) scale(1);
     }
 
@@ -420,9 +419,8 @@
   &__info {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) scale(0.9);
-    opacity: 0;
-    transition: $transition-fast ease-out;
+    transform: translateY(-50%) scale(0);
+    transition: $transition-fast ease-in-out;
     cursor: default;
   }
 }
