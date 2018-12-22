@@ -191,11 +191,60 @@
     @include margin-auto();
     border-top: 2px solid $grey;
     border-bottom: 2px solid $grey;
+    position: relative;
+
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -7px;
+      height: 2px;
+      width: 15px;
+      background: $grey;
+      left: -12px;
+      transform: rotate(45deg);
+    }
+
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -7px;
+      height: 2px;
+      width: 15px;
+      background: $grey;
+      right: -12px;
+      transform: rotate(-45deg);
+    }
   }
 
   .section__header {
     line-height: 2em;
     letter-spacing: 0.2em;
+
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -7px;
+      height: 2px;
+      width: 15px;
+      background: $grey;
+      left: -12px;
+      transform: rotate(-45deg);
+    }
+
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -7px;
+      height: 2px;
+      width: 15px;
+      background: $grey;
+      right: -12px;
+      transform: rotate(45deg);
+    }
   }
 }
 

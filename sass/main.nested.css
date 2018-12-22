@@ -7113,11 +7113,52 @@ ul {
 		margin-left: auto;
 		margin-right: auto;
 		border-top: 2px solid #eeeeee;
-		border-bottom: 2px solid #eeeeee; }
+		border-bottom: 2px solid #eeeeee;
+		position: relative; }
+		.section--intro .section__container::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: -7px;
+				height: 2px;
+				width: 15px;
+				background: #eeeeee;
+				left: -12px;
+				transform: rotate(45deg); }
+		.section--intro .section__container::after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: -7px;
+				height: 2px;
+				width: 15px;
+				background: #eeeeee;
+				right: -12px;
+				transform: rotate(-45deg); }
 
 .section--intro .section__header {
 		line-height: 2em;
 		letter-spacing: 0.2em; }
+		.section--intro .section__header::before {
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: -7px;
+				height: 2px;
+				width: 15px;
+				background: #eeeeee;
+				left: -12px;
+				transform: rotate(-45deg); }
+		.section--intro .section__header::after {
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: -7px;
+				height: 2px;
+				width: 15px;
+				background: #eeeeee;
+				right: -12px;
+				transform: rotate(45deg); }
 
 .services__flex {
 		padding-top: 2rem;
