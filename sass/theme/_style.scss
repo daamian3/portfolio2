@@ -233,9 +233,10 @@
   }
 
   .section__header {
+    color: $color-primary-dark;
     line-height: 2em;
     letter-spacing: 0.2em;
-    text-shadow: 1px 1px 0.5px rgba(2, 2, 2, 0.5);
+    text-shadow: 1px 1px 0px $yellow;
 
     &::before {
       content: '';
@@ -423,4 +424,40 @@
     transition: $transition-fast ease-in-out;
     cursor: default;
   }
+}
+
+.contact {
+  padding: 3rem;
+  margin-top: 2rem;
+  font-size: $font-size-huge;
+
+  &__container {
+    @include flexbox(column, center, center, wrap);
+  }
+
+  &__email {
+    color: #fff;
+    @include padding-box('small');
+    background-color: $color-primary-dark;
+    border-radius: $rounded-small;
+  }
+}
+
+.social {
+  width: 100%;
+  padding: 2rem;
+  @include flexbox(row, space-around, center, wrap);
+
+  &__icon {
+    font-size: 7rem;
+
+    &.fa-facebook {
+      color: #3b5998;
+    }
+
+    &.fa-instagram {
+      color: #cd486b;
+    }
+  }
+
 }
