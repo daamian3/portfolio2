@@ -4016,6 +4016,20 @@ readers do not read off random characters that represent icons */
 		font-weight: 900; }
 
 /*!
+ * Font Awesome Free 5.5.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+		font-family: 'Font Awesome 5 Brands';
+		font-style: normal;
+		font-weight: normal;
+		src: url("vendor/webfonts/fa-brands-400.eot");
+		src: url("vendor/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("vendor/webfonts/fa-brands-400.woff2") format("woff2"), url("vendor/webfonts/fa-brands-400.woff") format("woff"), url("vendor/webfonts/fa-brands-400.ttf") format("truetype"), url("vendor/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+
+.fab {
+		font-family: 'Font Awesome 5 Brands'; }
+
+/*!
  * animate.css -http://daneden.me/animate
  * Version - 3.6.0
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -7151,3 +7165,15 @@ ul {
 				letter-spacing: 2px;
 				font-weight: lighter;
 				padding-bottom: 1rem; }
+
+.tech {
+		padding: 2rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap; }
+		.tech__block {
+				height: 10rem;
+				width: 20%;
+				margin: 2rem; }

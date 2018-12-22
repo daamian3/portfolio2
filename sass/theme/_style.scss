@@ -261,3 +261,14 @@
     padding-bottom: 1rem;
   }
 }
+
+.tech{
+  padding: 2rem;
+  @include flexbox(row, space-between, center, wrap);
+
+  &__block{
+    height: 10rem;
+    width: 20%;
+    margin: 2rem;
+  }
+}
