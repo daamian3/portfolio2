@@ -1,13 +1,13 @@
-.menu-shower{
+.menu-shower {
   position: fixed;
   left: -9999px;
   top: 0;
 
-  &:checked ~ .panel{
+  &:checked ~ .panel {
     transform: translateX(0);
   }
 
-  &:checked + .button-circle .hamburger{
+  &:checked + .button-circle .hamburger {
     width: 26px;
     height: 20px;
     position: relative;
@@ -17,7 +17,7 @@
     cursor: pointer;
     transform: scale(0.66) translate(-25px, -8px) rotate(45deg);
 
-    &::before{
+    &::before {
       content: '';
       position: absolute;
       top: 0;
@@ -27,7 +27,7 @@
       transform: translateY(6px) rotate(-66deg);
     }
 
-    &::after{
+    &::after {
       content: '';
       position: absolute;
       top: 0;
@@ -40,7 +40,7 @@
   }
 }
 
-.button-circle{
+.button-circle {
   position: fixed;
   margin: 1.5em;
   background-color: $white;
@@ -53,7 +53,7 @@
   cursor: pointer;
 }
 
-.panel{
+.panel {
   position: fixed;
   top: 0;
   left: -1px;
@@ -63,17 +63,17 @@
   box-shadow: $box-shadow-far;
   z-index: 2;
   padding-top: 6em;
-  transition: $transition-fast cubic-bezier(.63,.38,.24,1);
+  transition: $transition-fast cubic-bezier(0.63, 0.38, 0.24, 1);
   @include flexbox(column, flex-start, center);
 
-  &__logo{
+  &__logo {
     @include margin-box();
     max-width: 100%;
     height: 3em;
   }
 }
 
-.header{
+.header {
   height: 100vh;
   background-image: url(images/background.jpg);
   background-size: cover;
@@ -82,60 +82,64 @@
   @include flexbox(column);
   color: $white;
 
-  &__main{
+  &__main {
     font-size: 5em;
     font-weight: lighter;
     letter-spacing: 5px;
     margin: 0;
-    background: -webkit-linear-gradient(bottom left, $color-primary-light, #ffcd83);
+    background: -webkit-linear-gradient(
+      bottom left,
+      $color-primary-light,
+      #ffcd83
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  &__flex{
+  &__flex {
     @include flexbox(row, space-between, center);
   }
 
-  &__below{
+  &__below {
     font-size: 3em;
     font-weight: normal;
-    letter-spacing: .5em;
+    letter-spacing: 0.5em;
     text-align: justify;
-    margin: 0 -.3em 0 5px;
+    margin: 0 -0.3em 0 5px;
   }
 
-  &__scroll{
+  &__scroll {
     position: absolute;
     bottom: 2em;
-    opacity: .9;
+    opacity: 0.9;
     box-shadow: $box-shadow-close;
     cursor: pointer;
     transition: $transition-fast;
     font-size: $font-size-big;
 
-    &:hover{
+    &:hover {
       opacity: 1;
       transform: translateY(5px);
     }
   }
 
-  @include media-query('hd', '', min){
+  @include media-query('hd', '', min) {
     background-image: url(images/background-big.jpg);
-  };
+  }
 }
 
-.footer{
+.footer {
   @include padding-box();
   background-color: $color-secondary-light;
   color: $white;
   text-align: center;
 }
 
-.menu{
+.menu {
   margin-top: 1em;
 
-  &__button{
+  &__button {
     list-style-type: none;
     cursor: pointer;
     position: relative;
@@ -143,19 +147,19 @@
     @include padding-box('big');
     transition: $transition-fast;
 
-    &:hover{
+    &:hover {
       background-color: $color-primary-base;
       color: $white;
       box-shadow: $box-shadow-close;
     }
 
-    &.active{
+    &.active {
       background-color: $color-primary-base;
       color: $white;
     }
   }
 
-  &__icon{
+  &__icon {
     max-width: 100%;
     height: 1em;
     margin-right: 1em;
@@ -167,10 +171,19 @@
   padding-top: 7rem;
   font-size: $font-size-huge;
 
+  @include media-query('phone') {
+    font-size: $font-size-base;
+  }
+
   &__container {
     @include flexbox(column, center, center, nowrap);
     @include margin-box('huge');
+    @include margin-auto();
+    max-width: 70%;
     text-align: center;
+    @include media-query('phone') {
+      max-width: 80%;
+    }
   }
 
   &__header {
@@ -179,7 +192,6 @@
   }
 
   &__content {
-    width: 75%;
     line-height: 2;
     letter-spacing: 3px;
   }
@@ -187,13 +199,15 @@
 
 .section--intro {
   .section__container {
-    width: 50%;
-    @include margin-auto();
+    width: calc(50%);
+    @include media-query('phone') {
+      width: calc(80%);
+    }
     border-top: 2px solid $grey;
     border-bottom: 2px solid $grey;
     position: relative;
 
-    &::before{
+    &::before {
       content: '';
       display: block;
       position: absolute;
@@ -205,7 +219,7 @@
       transform: rotate(45deg);
     }
 
-    &::after{
+    &::after {
       content: '';
       display: block;
       position: absolute;
@@ -221,8 +235,9 @@
   .section__header {
     line-height: 2em;
     letter-spacing: 0.2em;
+    text-shadow: 1px 1px 0.5px rgba(2, 2, 2, 0.5);
 
-    &::before{
+    &::before {
       content: '';
       display: block;
       position: absolute;
@@ -234,7 +249,7 @@
       transform: rotate(-45deg);
     }
 
-    &::after{
+    &::after {
       content: '';
       display: block;
       position: absolute;
@@ -248,16 +263,13 @@
   }
 }
 
-
-
-
-.services{
-  &__flex{
+.services {
+  &__flex {
     padding-top: 2rem;
     @include flexbox(row, space-around, center, wrap);
   }
 
-  &__block{
+  &__block {
     font-size: $font-size-base;
     background-color: $grey;
     width: 15rem;
@@ -269,18 +281,18 @@
     transition: $transition-fast;
     position: relative;
 
-    &:hover{
+    &:hover {
       box-shadow: $box-shadow-far;
 
-      .services--title::after{
+      .services--title::after {
         text-shadow: $box-shadow-far !important;
       }
     }
 
-    &:nth-child(2) .services--title{
+    &:nth-child(2) .services--title {
       background-color: #bbbbbb;
 
-      &::after{
+      &::after {
         content: '\f005';
         display: block;
         position: absolute;
@@ -295,10 +307,10 @@
       }
     }
 
-    &:nth-child(3) .services--title{
+    &:nth-child(3) .services--title {
       background-color: #aaaaaa;
 
-      &::after{
+      &::after {
         content: '\f005';
         display: block;
         position: absolute;
@@ -313,10 +325,10 @@
       }
     }
 
-    &:nth-child(4) .services--title{
+    &:nth-child(4) .services--title {
       background-color: #999999;
 
-      &::after{
+      &::after {
         content: '\f005';
         display: block;
         position: absolute;
@@ -332,18 +344,18 @@
     }
   }
 
-  &__li{
+  &__li {
     padding: 1rem 1rem;
   }
 
-  &--title{
+  &--title {
     font-weight: lighter;
     font-size: $font-size-biggest;
     letter-spacing: 2px;
     padding-top: 1rem;
   }
 
-  &--price{
+  &--price {
     font-size: $font-size-huge;
     letter-spacing: 2px;
     font-weight: lighter;
@@ -351,64 +363,64 @@
   }
 }
 
-.tech{
+.tech {
   padding: 2rem;
+  font-size: $font-size-huge;
   @include flexbox(row, space-between, center, wrap);
 
-  @include media-query('phone'){
+  @include media-query('phone') {
     @include flexbox(row, center, center, wrap);
   }
 
-  &__block{
+  &__block {
     width: calc(25%);
 
     margin: 5rem 1rem;
     position: relative;
 
-    &:hover p{
+    &:hover p {
       opacity: 1;
       transform: translateY(-50%) scale(1);
     }
 
-    &:hover i{
+    &:hover i {
       opacity: 0;
     }
 
-
-    @include media-query('phone'){
+    @include media-query('phone') {
       min-width: 80%;
     }
   }
 
-  &__icon{
+  &__icon {
     font-size: 8rem;
     transition: $transition-fast ease-in;
 
-    &.fa-html5{
-      color: #E34C26;
+    &.fa-html5 {
+      color: #e34c26;
     }
 
-    &.fa-css3-alt{
+    &.fa-css3-alt {
       color: #1471b6;
     }
 
-    &.fa-js{
+    &.fa-js {
       color: #f7df1e;
     }
 
-    &.fa-sass{
+    &.fa-sass {
       color: #c69;
     }
 
-    &.fa-react{
+    &.fa-react {
       color: #00d8ff;
     }
   }
 
-  &__info{
+  &__info {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) scale(.9);
+    transform: translateY(-50%) scale(0.9);
     opacity: 0;
     transition: $transition-fast ease-out;
     cursor: default;
