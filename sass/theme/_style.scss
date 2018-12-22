@@ -165,10 +165,9 @@
 // Sections
 .section {
   padding-top: 7rem;
-  padding-bottom: 7rem;
   font-size: $font-size-huge;
 
-  &__container { 
+  &__container {
     @include flexbox(column, center, center, nowrap);
     @include margin-box('huge');
     text-align: center;
@@ -176,6 +175,7 @@
 
   &__header {
     text-transform: uppercase;
+    text-align: center;
   }
 
   &__content {
@@ -191,11 +191,60 @@
     @include margin-auto();
     border-top: 2px solid $grey;
     border-bottom: 2px solid $grey;
+    position: relative;
+
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -7px;
+      height: 2px;
+      width: 15px;
+      background: $grey;
+      left: -12px;
+      transform: rotate(45deg);
+    }
+
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -7px;
+      height: 2px;
+      width: 15px;
+      background: $grey;
+      right: -12px;
+      transform: rotate(-45deg);
+    }
   }
-  
+
   .section__header {
     line-height: 2em;
     letter-spacing: 0.2em;
+
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -7px;
+      height: 2px;
+      width: 15px;
+      background: $grey;
+      left: -12px;
+      transform: rotate(-45deg);
+    }
+
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -7px;
+      height: 2px;
+      width: 15px;
+      background: $grey;
+      right: -12px;
+      transform: rotate(45deg);
+    }
   }
 }
 
@@ -203,19 +252,13 @@
 
 
 .services{
-  padding: 2rem;
-
-  &__header {
-    text-align: center;
-    text-transform: uppercase;
-    padding-bottom: 1em;
-  }
-
   &__flex{
+    padding-top: 2rem;
     @include flexbox(row, space-around, center, wrap);
   }
 
   &__block{
+    font-size: $font-size-base;
     background-color: $grey;
     width: 15rem;
     margin: 1rem;
@@ -312,9 +355,62 @@
   padding: 2rem;
   @include flexbox(row, space-between, center, wrap);
 
+  @include media-query('phone'){
+    @include flexbox(row, center, center, wrap);
+  }
+
   &__block{
-    height: 10rem;
-    width: 20%;
-    margin: 2rem;
+    width: calc(25%);
+
+    margin: 5rem 1rem;
+    position: relative;
+
+    &:hover p{
+      opacity: 1;
+      transform: translateY(-50%) scale(1);
+    }
+
+    &:hover i{
+      opacity: 0;
+    }
+
+
+    @include media-query('phone'){
+      min-width: 80%;
+    }
+  }
+
+  &__icon{
+    font-size: 8rem;
+    transition: $transition-fast ease-in;
+
+    &.fa-html5{
+      color: #E34C26;
+    }
+
+    &.fa-css3-alt{
+      color: #1471b6;
+    }
+
+    &.fa-js{
+      color: #f7df1e;
+    }
+
+    &.fa-sass{
+      color: #c69;
+    }
+
+    &.fa-react{
+      color: #00d8ff;
+    }
+  }
+
+  &__info{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(.9);
+    opacity: 0;
+    transition: $transition-fast ease-out;
+    cursor: default;
   }
 }
