@@ -7089,8 +7089,42 @@ ul {
 				height: 1em;
 				margin-right: 1em; }
 
+.section {
+		padding-top: 7rem;
+		padding-bottom: 7rem;
+		font-size: 1.3rem; }
+		.section__container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: nowrap;
+				margin: 24px 36px;
+				text-align: center; }
+		.section__header {
+				text-transform: uppercase; }
+		.section__content {
+				width: 75%;
+				line-height: 2;
+				letter-spacing: 3px; }
+
+.section--intro .section__container {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		border-top: 2px solid #eeeeee;
+		border-bottom: 2px solid #eeeeee; }
+
+.section--intro .section__header {
+		line-height: 2em;
+		letter-spacing: 0.2em; }
+
 .services {
 		padding: 2rem; }
+		.services__header {
+				text-align: center;
+				text-transform: uppercase;
+				padding-bottom: 1em; }
 		.services__flex {
 				display: flex;
 				flex-direction: row;
