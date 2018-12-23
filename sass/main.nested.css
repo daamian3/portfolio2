@@ -7305,7 +7305,8 @@ ul {
 		background-image: url(images/contact.jpg);
 		background-position: center;
 		background-size: cover;
-		background-repeat: no-repeat; }
+		background-repeat: no-repeat;
+		background-attachment: fixed; }
 		.contact__container {
 				display: flex;
 				flex-direction: column;
