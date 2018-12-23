@@ -1,3 +1,6 @@
-$(window).on("load", function() {
-	$("#loading").fadeOut('fast');
-});
+module.exports = function loader($) {
+  $(window).on("load", function () {
+    $("#loading").fadeOut('fast');
+  });
+}
+
