@@ -445,7 +445,8 @@
   &__email {
     color: #fff;
     @include padding-box('small');
-    background-color: $color-primary-dark;
+    @include margin-box('small');
+    background-color: $color-primary-base;
     border-radius: $rounded-small;
   }
 }
