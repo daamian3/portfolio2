@@ -430,9 +430,15 @@
   padding: 3rem;
   margin-top: 2rem;
   font-size: $font-size-huge;
+  background-image: url(images/contact.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   &__container {
     @include flexbox(column, center, center, wrap);
+    background-color: rgba(255, 255, 255, .75);
+    box-shadow: $box-shadow-far;
   }
 
   &__email {
@@ -456,7 +462,9 @@
     }
 
     &.fa-instagram {
-      color: #cd486b;
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
