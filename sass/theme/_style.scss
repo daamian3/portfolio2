@@ -434,6 +434,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed; // OPCJONALNE
 
   &__container {
     @include flexbox(column, center, center, wrap);
