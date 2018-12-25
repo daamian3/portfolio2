@@ -168,7 +168,7 @@
 
 // Sections
 .section {
-  padding-top: 7rem;
+  margin-top: 7rem;
   font-size: $font-size-huge;
 
   @include media-query('phone') {
@@ -198,7 +198,7 @@
 }
 
 .section--intro {
-  .section__container {
+  .section__header {
     width: calc(50%);
     @include media-query('phone') {
       width: calc(80%);
@@ -261,6 +261,14 @@
       right: -12px;
       transform: rotate(45deg);
     }
+  }
+}
+
+.about{
+  &__image{
+    width: 100%;
+    margin: 2rem 0;
+    box-shadow: $box-shadow-close;
   }
 }
 
