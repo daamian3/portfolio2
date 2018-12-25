@@ -13,7 +13,7 @@
 // without getting a written permission first.
 //
 
-module.exports = function smoothScroll() {
+(function smoothScroll() {
 
   // Scroll Variables (tweakable)
   var defaultOptions = {
@@ -747,4 +747,4 @@ module.exports = function smoothScroll() {
   else
     window.SmoothScroll = SmoothScroll;
 
-}
+})();

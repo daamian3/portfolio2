@@ -1,4 +1,4 @@
-module.exports = function menuScroll($) {
+function menuScroll() {
   // Add scroll listener on document
   $(document).on("scroll", handleScroll);
   var $buttons = $(".menu__button");
@@ -38,7 +38,7 @@ module.exports = function menuScroll($) {
   // Handle scroll
   function handleScroll() {
     var scrollPos = $(document).scrollTop();
-    // When user scrolled to the bottom, add active class to contact menu button 
+    // When user scrolled to the bottom, add active class to contact menu button
     if ((window.innerHeight + document.documentElement.scrollTop) >= document.body.offsetHeight) {
       var $contactLink = $("a[href='#contact']");
       $contactLink.parent().siblings().removeClass("active");
@@ -56,6 +56,4 @@ module.exports = function menuScroll($) {
       }
     })
   }
-}
-
-
+};
