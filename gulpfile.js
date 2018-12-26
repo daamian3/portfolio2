@@ -3,7 +3,7 @@
 const gulp = require('gulp'),
       rename = require('gulp-rename'),
       sass = require('gulp-sass'),
-      uglify = require('gulp-uglify'),
+      minify = require('gulp-minify'),
       concat = require('gulp-concat'),
       input_sass = './sass/main.scss',
       input_js = './scripts/',
@@ -25,7 +25,7 @@ gulp.task('sass', function () {
 gulp.task("js", function () {
     return gulp.src([input_js+'jquery.min.js', input_js+'**/!(jquery.min)*.js'])
         .pipe(concat("app.bundle.min.js"))
-        .pipe(uglify())
+        .pipe(minify())
         .pipe(gulp.dest(output));
 });
 
