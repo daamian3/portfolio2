@@ -241,22 +241,55 @@
     <section class="section contact" id="contact">
       <div class="section__container contact__container">
         <h2 class="section__header">Kontakt</h2>
-        <p class="contact__helper">Jeżeli jesteś zainteresowany współpracą, skontaktuj się z nami</p>
-        <p class="contact__helper">Napisz do nas na adres</p>
-        <span class="contact__email">adres@email.com</span>
-        <p class="contact__helper">Lub znajdź nas tutaj</p>
-        <div class="social">
-          <div class="social__block">
-            <a class="social__link" href="#">
-              <i class="social__icon fab fa-facebook"></i>
-            </a>
-          </div>
-          <div class="social__block">
-            <a class="social__link" href="#">
-              <i class="social__icon fab fa-instagram"></i>
-            </a>
+        <p class="contact__helper">Jeżeli jesteś zainteresowany współpracą, skontaktuj się z nami:</p>
+
+        <div class="contact__flex">
+          <form class="contact__form">
+
+            <input class="contact__input" type="text" name="email" aria-label="email" placeholder="Email"/>
+            <input class="contact__input" type="text" name="firstname" aria-label="firstname" placeholder="Imię"/>
+            <input class="contact__input" type="text" name="lastname" aria-label="lastname" placeholder="Nazwisko"/>
+
+            <textarea class="contact__textarea"></textarea>
+          </form>
+
+          <div class="contact__alternative">
+            <div class="contact__alternative--flex">
+              <div class="contact__info">
+                <p>
+                  <i class="fas fa-envelope contact__icon"></i> <span>dm@gmail.com</span>
+                </p>
+
+                <p>
+                  <i class="fas fa-phone contact__icon"></i>
+                  <span>666 666 666</span>
+                </p>
+
+                <p>
+                  <i class="fas fa-map-marker-alt contact__icon"></i>
+                  <span>Cicha 2 85-666</span>
+                </p>
+              </div>
+              <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2392.443771903238!2d18.174037570722547!3d53.15607644545832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x37b62e74f672a3!2sDom+Strach%C3%B3w!5e0!3m2!1spl!2spl!4v1545951452307"  frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+            <div class="social">
+              <div class="social__block">
+                <a class="social__link" href="#">
+                  <i class="social__icon fab fa-facebook"></i>
+                </a>
+              </div>
+              <div class="social__block">
+                <a class="social__link" href="#">
+                  <i class="social__icon fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+
+
+
       </div>
     </section>
 

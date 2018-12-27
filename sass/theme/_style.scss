@@ -168,6 +168,7 @@
   background-color: $color-secondary-light;
   color: $white;
   text-align: center;
+  @include padding-box('big');
 }
 
 .menu {
@@ -228,13 +229,13 @@
 
   &__container {
     @include flexbox(column, center, center, nowrap);
-    @include margin-box('huge');
     @include margin-auto();
     max-width: 70%;
     text-align: center;
 
     @include media-query('phone') {
-      max-width: 80%;
+      max-width: 100%;
+      padding: 0 10%;
     }
   }
 
@@ -323,7 +324,7 @@
   border-radius: $rounded-big;
   width: 64vw; //16:9 - 64vw
   height: 36vw; //16:9 -  36vw
-  @include flexbox(column);
+  @include flexbox(column, space-around, center);
   display: none;
 
   &__sign{
@@ -342,27 +343,27 @@
 
     &--alone{
       width: 90%;
-      height: 12vw;
+      height: 20%;
 
       &:first-child{
-        height: 3vw;
+        height: 2vw;
       }
 
       &:last-child{
-        height: 3vw;
+        height: 2vw;
       }
     }
 
     &--double{
       width: 40%;
-      height: 7vw;
+      height: 5vw;
       margin: 1% 5%;
       background-color: $color-primary-base;
     }
 
     &--triple{
       width: 23.33%;
-      height: 3vw;
+      height: 2vw;
       background-color: $color-primary-base;
       margin: 1% 5%;
     }
@@ -550,7 +551,7 @@
   background-attachment: fixed; // OPCJONALNE
 
   @include media-query('phone') {
-    padding: 3rem 0;
+    padding: 0;
   }
 
   &__container {
@@ -558,14 +559,78 @@
     background-color: rgba(255, 255, 255, .75);
     box-shadow: $box-shadow-far;
     padding: 1rem;
+
+    @include media-query('phone') {
+      box-shadow: inherit;
+    }
   }
 
-  &__email {
-    color: #fff;
-    @include padding-box('small');
-    @include margin-box('small');
-    background-color: $color-primary-base;
-    border-radius: $rounded-small;
+  &__flex {
+    @include flexbox(row, space-around);
+    width: 100%;
+
+    @include media-query('phone'){
+      flex-direction: column;
+    }
+  }
+
+  &__form{
+    @include flexbox(column);
+    width: 40%;
+
+    @include media-query('phone'){
+      width: 90%;
+    }
+  }
+
+  &__input, &__textarea{
+    margin: 10px 10px;
+    padding: 10px;
+    font-size: $font-size-base;
+    width: 100%;
+  }
+
+  &__textarea{
+    resize: vertical;
+    height: 10rem;
+  }
+
+  &__alternative{
+    width: 50%;
+    font-size: $font-size-base;
+    text-align: left;
+
+    @include media-query('phone'){
+      width: 90%;
+      text-align: center;
+      font-size: $font-size-big;
+    }
+
+    &--flex{
+      @include flexbox(row, space-between, center, wrap);
+    }
+  }
+
+  &__info{
+    margin: 1rem 0;
+
+    @include media-query('phone'){
+      width: 100%;
+    }
+  }
+
+  &__map{
+    width: 60%;
+    height: 12vw;
+
+    @include media-query('phone'){
+      width: 100%;
+      height: 250px;
+    }
+  }
+
+  &__icon{
+    margin-right: 1rem;
   }
 }
 
@@ -575,7 +640,14 @@
   @include flexbox(row, space-around, center, wrap);
 
   &__icon {
-    font-size: 7rem;
+    font-size: 2rem;
+    transition: $transition-fast;
+    backface-visibility: hidden;
+    transform: translateZ(0) scale(1.0, 1.0);
+
+    @include media-query('phone'){
+      font-size: 4rem;
+    }
 
     &.fa-facebook {
       color: #3b5998;
@@ -585,6 +657,10 @@
       background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    &:hover{
+      transform: scale(1.1) translateZ(0);
     }
   }
 

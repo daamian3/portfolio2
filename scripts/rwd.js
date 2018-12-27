@@ -1,14 +1,14 @@
 (function(){
   const width = {
     desktop: '64vw',
-    tablet: '45vw',
-    phone: '36vw',
+    tablet: '30vw',
+    phone: '18vw',
   };
 
   const height = {
     desktop: '36vw',
-    tablet: '60vw',
-    phone: '64vw',
+    tablet: '40vw',
+    phone: '32vw',
   };
 
   const width_double = {
@@ -49,6 +49,10 @@
 
     $rwd.fadeIn(1000).css('display', 'flex');
     $rwd_sign.fadeIn(1000);
+
+    $("html, body").animate({
+      scrollTop: $rwd_sign.offset().top - 10
+    })
 
     setTimeout(function(){
       resize('tablet');
