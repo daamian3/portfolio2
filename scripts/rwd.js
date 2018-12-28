@@ -51,7 +51,7 @@
     $rwd_sign.fadeIn(1000);
 
     $("html, body").animate({
-      scrollTop: $rwd_sign.offset().top - 10
+      scrollTop: $rwd.offset().top - $(window).height() / 2 + $rwd.height() / 2
     })
 
     setTimeout(function(){

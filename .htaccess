@@ -1,0 +1,4 @@
+RewriteCond %{HTTP_HOST} ^www.daamian3.github\.io$ [NC]
+RewriteRule ^(.*)$ Http://daamian3.github.io/$1 [R=301,L]
+
+Cache-Control: max-age=31536000

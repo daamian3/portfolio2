@@ -34,7 +34,7 @@
       left: 0;
       width: 100%;
       border-top: 3px solid $black;
-      transition: 0.3s transform linear;
+      transition: .3s transform linear;
       transform: rotate(-90deg) translateX(3px);
     }
   }
@@ -256,13 +256,17 @@
     border-top: 2px solid $grey;
     border-bottom: 2px solid $grey;
     position: relative;
-    color: $color-primary-dark;
-    line-height: 2em;
-    letter-spacing: 0.2em;
-    text-shadow: 1px 1px 0px $yellow;
+    margin-bottom: 3rem;
 
     @include media-query('phone') {
       width: calc(80%);
+    }
+
+    &--text {
+      color: $color-primary-dark;
+      line-height: 2em;
+      letter-spacing: 0.2em;
+      text-shadow: 1px 1px 0px $yellow;
     }
 
     &::before {
@@ -315,7 +319,6 @@
       }
     }
   }
-
 }
 
 .rwd{
