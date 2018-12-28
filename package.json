@@ -21,6 +21,7 @@
   "homepage": "https://github.com/daamian3/portfolio2#readme",
   "devDependencies": {
     "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-livereload": "^4.0.1",
     "gulp-minify": "^3.1.0",
@@ -31,6 +32,13 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
+    "browserslist": "^4.3.6",
     "jquery": "^3.3.1"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 5%",
+    "maintained node versions",
+    "not dead"
+  ]
 }

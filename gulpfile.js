@@ -3,6 +3,7 @@
 const gulp = require('gulp'),
       rename = require('gulp-rename'),
       sass = require('gulp-sass'),
+      autoprefixer = require('gulp-autoprefixer'),
       minify = require('gulp-minify'),
       concat = require('gulp-concat'),
       input_sass = './sass/main.scss',
@@ -18,6 +19,7 @@ gulp.task('sass', function () {
       outputStyle: 'compressed'
     }))
     .on('error', sass.logError)
+    .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
     .pipe(rename('./style.min.css'))
     .pipe(gulp.dest(output));
 });
