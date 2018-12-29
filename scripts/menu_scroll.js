@@ -4,9 +4,13 @@ function menuScroll() {
   var $buttons = $(".menu__button");
   var $headerScroll = $(".header__scroll");
 
+  var going = false;
   // Handle menu button click
   $buttons.on("click", function () {
     event.preventDefault();
+    if (going) return;
+    console.log('Button clicked');
+    going = true;
     // Off scroll event when the menu button is clicked
     $(document).off("scroll");
     var link = $(this).children().attr("href");
@@ -19,11 +23,10 @@ function menuScroll() {
     // Scroll to corresponding element
     $("html, body").animate({
       scrollTop: $(link).offset().top
-    }, height, function () {
-      addScrollListener(); // Call cb function when scrolling animation is finished
-    });
+    }, height, scrollAnimationCb); // Call cb function when scrolling animation is finished
 
-    function addScrollListener() {
+    function scrollAnimationCb() {
+      going = false;
       $(document).on("scroll", handleScroll);
     }
   });

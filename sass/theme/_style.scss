@@ -188,7 +188,6 @@
     @include media-query('phone'){
       font-size: $font-size-huge;
       width: 100%;
-      text-align: center;
     }
 
     &:hover {
@@ -224,15 +223,13 @@
   font-size: $font-size-huge;
 
   @include media-query('phone') {
-    font-size: $font-size-base;
+    font-size: $font-size-big;
   }
 
   &__container {
-    @include flexbox(column, center, center, nowrap);
-    @include margin-auto();
     max-width: 70%;
-    text-align: center;
-
+    @include flexbox(column, center, center, wrap);
+    @include margin-auto();
     @include media-query('phone') {
       max-width: 100%;
       padding: 0 10%;
@@ -246,13 +243,13 @@
 
   &__content {
     line-height: 2;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
+    text-align: justify;
   }
 }
 
 .section--intro {
   .section__header {
-    width: calc(50%);
     border-top: 2px solid $grey;
     border-bottom: 2px solid $grey;
     position: relative;
@@ -264,9 +261,9 @@
 
     &--text {
       color: $color-primary-dark;
+      font-weight: lighter;
       line-height: 2em;
       letter-spacing: 0.2em;
-      text-shadow: 1px 1px 0px $yellow;
     }
 
     &::before {
@@ -490,7 +487,16 @@
     @include flexbox(row, center, center, wrap);
   }
 
+  &__container {
+    max-width: 80%;
+    @include media-query('phone') {
+      max-width: 100%;
+      padding: 0 10%;
+    }
+  }
+
   &__block {
+    text-align: center;
     width: calc(25%);
 
     margin: 5rem 1rem;
@@ -545,6 +551,7 @@
 
 .contact {
   padding: 3rem;
+  text-align: center;
   margin-top: 2rem;
   font-size: $font-size-huge;
   background-image: url(images/contact.jpg);
@@ -552,7 +559,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; // OPCJONALNE
-
+  
   @include media-query('phone') {
     padding: 0;
   }
@@ -586,7 +593,7 @@
     }
   }
 
-  &__input, &__textarea{
+  &__input, &__textarea, &__button {
     margin: 10px 10px;
     padding: 10px;
     font-size: $font-size-base;
@@ -597,6 +604,18 @@
     resize: vertical;
     height: 10rem;
   }
+
+  &__button {
+    background-color: $color-primary-light;
+    color: $white;
+    transition: $transition-fast;
+    border-radius: $rounded-small;
+
+    &:hover, &:active {
+      background-color: $color-primary-dark;
+    }
+  }
+
 
   &__alternative{
     width: 50%;
@@ -616,7 +635,8 @@
 
   &__info{
     margin: 1rem 0;
-
+    text-align: left;
+    @include flexbox(row, center, center, wrap);
     @include media-query('phone'){
       width: 100%;
     }
@@ -658,6 +678,7 @@
 
     &.fa-instagram {
       background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }

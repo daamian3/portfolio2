@@ -7,7 +7,8 @@
     "build": "webpack",
     "dev": "webpack --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "gulp sass && gulp sass:watch"
+    "sass": "gulp sass && gulp sass:watch",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",

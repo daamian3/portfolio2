@@ -1,4 +1,4 @@
-(function(){
+function rwd() {
   const width = {
     desktop: '64vw',
     tablet: '30vw',
@@ -29,7 +29,7 @@
   const $rwd_double = $(".rwd__block--double");
   const $rwd_triple = $(".rwd__block--triple");
 
-  function resize(device){
+  function resize(device) {
     $rwd.animate({
       width: width[device],
       height: height[device],
@@ -54,15 +54,15 @@
       scrollTop: $rwd.offset().top - $(window).height() / 2 + $rwd.height() / 2
     })
 
-    setTimeout(function(){
+    setTimeout(function () {
       resize('tablet');
       $rwd_sign.text('Tablet');
 
-      setTimeout(function(){
+      setTimeout(function () {
         resize('phone');
         $rwd_sign.text('Smartphone');
 
-        setTimeout(function(){
+        setTimeout(function () {
           resize('desktop');
           $rwd_sign.text('Komputer');
 
@@ -72,4 +72,4 @@
     }, 2000);
 
   });
-})();
+}
