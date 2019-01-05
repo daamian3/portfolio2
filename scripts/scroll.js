@@ -1,4 +1,4 @@
-function menuScroll() {
+function scroll() {
   // Add scroll listener on document
   $(document).on("scroll", handleScroll);
   var $buttons = $(".menu__button");
@@ -9,7 +9,6 @@ function menuScroll() {
   $buttons.on("click", function () {
     event.preventDefault();
     if (going) return;
-    console.log('Button clicked');
     going = true;
     // Off scroll event when the menu button is clicked
     $(document).off("scroll");
@@ -23,12 +22,10 @@ function menuScroll() {
     // Scroll to corresponding element
     $("html, body").animate({
       scrollTop: $(link).offset().top
-    }, height, scrollAnimationCb); // Call cb function when scrolling animation is finished
-
-    function scrollAnimationCb() {
+    }, height, function () {
       going = false;
       $(document).on("scroll", handleScroll);
-    }
+    }); // Call cb function when scrolling animation is finished
   });
 
   // Arrow in header clicked, scroll to intro section
@@ -57,6 +54,22 @@ function menuScroll() {
       } else {
         currentButton.removeClass("active");
       }
-    })
+    });
+
+    // Show tech cards on mobile when scrolling
+    if (isMobile()) {
+      var $techBlocks = $(".tech__block");
+      $techBlocks.each(function () {
+        var currentBlock = $(this);
+        if (currentBlock.position().top - currentBlock.height() <= scrollPos && currentBlock.position().top + currentBlock.height() > scrollPos) {
+          currentBlock.find("p").css({ "transform": "translateY(-50%) scale(1)" })
+          currentBlock.find("i").css("opacity", 0);
+        } else {
+          currentBlock.find("p").css({ "transform": "translateY(50%) scale(0)" });
+          currentBlock.find("i").css("opacity", 1);
+        }
+      })
+    }
   }
 };
+

@@ -3,7 +3,7 @@ $(document).ready(function () {
     if (isMobile()) $('#menu-shower').prop('checked', false);
   });
 
-  menuScroll();
+  scroll();
   rwd();
 });
 
