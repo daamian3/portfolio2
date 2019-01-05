@@ -146,6 +146,7 @@
     cursor: pointer;
     transition: $transition-fast;
     font-size: 2rem;
+    padding: 0.8rem;
 
     @include media-query('phone') {
       font-size: 3rem;
@@ -396,7 +397,7 @@
     transition: $transition-fast;
     position: relative;
 
-    &:hover {
+    &:hover, &:focus {
       box-shadow: $box-shadow-far;
 
       .services--title::after {
@@ -499,12 +500,12 @@
     text-align: center;
     width: calc(25%);
 
-    margin: 5rem 1rem;
+    margin: 6rem 1rem;
     position: relative;
 
     &:hover p {
       transform: translateY(-50%) scale(1);
-    }
+}
 
     &:hover i {
       opacity: 0;
@@ -546,7 +547,15 @@
     transform: translateY(-50%) scale(0);
     transition: $transition-fast ease-in-out;
     cursor: default;
-  }
+    -webkit-transform: translateY(-50%) scale(0);
+    -moz-transform: translateY(-50%) scale(0);
+    -ms-transform: translateY(-50%) scale(0);
+    -o-transform: translateY(-50%) scale(0);
+    -webkit-transition: $transition-fast ease-in-out;
+    -moz-transition: $transition-fast ease-in-out;
+    -ms-transition: $transition-fast ease-in-out;
+    -o-transition: $transition-fast ease-in-out;
+}
 }
 
 .contact {
@@ -565,6 +574,7 @@
   }
 
   &__container {
+    max-width: 90%;
     @include flexbox(column, center, center, wrap);
     background-color: rgba(255, 255, 255, .75);
     box-shadow: $box-shadow-far;
@@ -629,7 +639,7 @@
     }
 
     &--flex{
-      @include flexbox(row, space-between, center, wrap);
+      @include flexbox(column, space-between, center, wrap);
     }
   }
 
