@@ -255,14 +255,16 @@
     border-bottom: 2px solid $grey;
     position: relative;
     margin-bottom: 3rem;
+    width: 50%;
 
     @include media-query('phone') {
-      width: calc(80%);
+      width: 80%;
     }
 
     &--text {
       color: $color-primary-dark;
-      font-weight: lighter;
+      font-weight: normal;
+      text-shadow: 2px 2px silver;
       line-height: 2em;
       letter-spacing: 0.2em;
     }
@@ -393,16 +395,27 @@
     min-width: 175px;
     text-align: center;
     border-radius: 0 0 20px 20px;
-    box-shadow: $box-shadow-close;
-    transition: $transition-fast;
     position: relative;
+    z-index: 4;
 
-    &:hover, &:focus {
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
       box-shadow: $box-shadow-far;
+      border-radius: 0 0 20px 20px;
+      opacity: .6;
+      z-index: 5;
+      background-color: transparent;
+      transition: $transition-fast;
+    }
 
-      .services--title::after {
-        text-shadow: $box-shadow-far !important;
-      }
+    &:hover::after{
+      opacity: 1;
     }
 
     &:nth-child(2) .services--title {
@@ -418,8 +431,8 @@
         font-family: 'Font Awesome 5 Free';
         color: #8f4922;
         font-size: 2rem;
-        text-shadow: $box-shadow-close;
         transition: $transition-fast;
+        z-index: 7;
       }
     }
 
@@ -436,8 +449,8 @@
         font-family: 'Font Awesome 5 Free';
         color: grey;
         font-size: 2rem;
-        text-shadow: $box-shadow-close;
         transition: $transition-fast;
+        z-index: 7;
       }
     }
 
@@ -454,8 +467,8 @@
         font-family: 'Font Awesome 5 Free';
         color: gold;
         font-size: 2rem;
-        text-shadow: $box-shadow-close;
         transition: $transition-fast;
+        z-index: 7;
       }
     }
   }
@@ -568,7 +581,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; // OPCJONALNE
-  
+
   @include media-query('phone') {
     padding: 0;
   }
@@ -614,18 +627,6 @@
     resize: vertical;
     height: 10rem;
   }
-
-  &__button {
-    background-color: $color-primary-light;
-    color: $white;
-    transition: $transition-fast;
-    border-radius: $rounded-small;
-
-    &:hover, &:active {
-      background-color: $color-primary-dark;
-    }
-  }
-
 
   &__alternative{
     width: 50%;

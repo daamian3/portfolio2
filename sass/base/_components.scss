@@ -3,11 +3,11 @@
   padding: 6px 20px;
   background: $color-primary-base;
   color: #fefefe;
-  font-family: Roboto;
-  font-weight: 600;
+  font-family: inherit;
   border-radius: $rounded-small;
   transition: $transition-fast;
   cursor: pointer;
+  font-size: $font-size-base;
 
   &:hover{
     background: $color-primary-dark;
@@ -15,7 +15,7 @@
 
   &.big{
     padding: 10px 25px;
-    font-size: 1.2em;
+    font-size: $font-size-big;
   }
 }
 
