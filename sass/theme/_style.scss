@@ -221,7 +221,7 @@
 
 // Sections
 .section {
-  margin-top: 3.5rem;  
+  margin-top: 3.5rem;
   font-size: $font-size-huge;
 
   @include media-query('phone') {
@@ -389,26 +389,22 @@
   padding: 1rem;
 
   &__container{
-    width: 50%;
+    width: 60%;
   }
 
   &__block {
     font-size: $font-size-base;
     text-align: center;
     transition: $transition-fast;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox(row, center, center, wrap)
   }
 
   &__li{
     padding: 1rem;
-
   }
 
   &__button{
-    max-width: 25%;
-    font-size: $font-size-tiny;
+    margin: 2rem 0;
   }
 
   &--title {
@@ -516,7 +512,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; // OPCJONALNE
-  
+
   @include media-query('phone') {
     padding: 0;
   }

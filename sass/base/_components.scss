@@ -23,7 +23,17 @@
     color: $color-primary-base;
 
     &:hover{
-      background: $grey;
+      background: $color-primary-base;
+      color: $white;
+    }
+  }
+
+  &.soft{
+    background: transparent;
+    border: solid 2px $white;
+
+    &:hover{
+      background: transparent;
     }
   }
 }
