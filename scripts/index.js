@@ -5,6 +5,11 @@ $(document).ready(function () {
 
   scroll();
   rwd();
+
+  $('#services').flickity({
+    cellAlign: 'left',
+    contain: true
+  });
 });
 
 

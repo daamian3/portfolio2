@@ -17,6 +17,15 @@
     padding: 10px 25px;
     font-size: 1.2em;
   }
+
+  &.inverted{
+    background: $white;
+    color: $color-primary-base;
+
+    &:hover{
+      background: $grey;
+    }
+  }
 }
 
 .loading{
