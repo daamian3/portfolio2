@@ -250,75 +250,77 @@
     letter-spacing: 1px;
     text-align: justify;
   }
-}
 
-.section--intro {
-  .section__header {
-    border-top: 2px solid $grey;
-    border-bottom: 2px solid $grey;
-    position: relative;
-    margin-bottom: 3rem;
+  &--intro {
+    .section__header {
+      border-top: 2px solid $grey;
+      border-bottom: 2px solid $grey;
+      position: relative;
+      margin-bottom: 3rem;
 
-    @include media-query('phone') {
-      width: calc(80%);
-    }
+      &--text {
+        color: $color-primary-dark;
+        line-height: 2em;
+        text-shadow: grey;
+        font-weight: inherit;
+        letter-spacing: 0.2em;
+      }
 
-    &--text {
-      color: $color-primary-dark;
-      line-height: 2em;
-      text-shadow: grey;
-      font-weight: inherit;
-      letter-spacing: 0.2em;
-    }
-
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -7px;
-      height: 2px;
-      width: 15px;
-      background: $grey;
-      left: -12px;
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -7px;
-      height: 2px;
-      width: 15px;
-      background: $grey;
-      right: -12px;
-      transform: rotate(-45deg);
-    }
-
-    .border_helper{
       &::before {
         content: '';
         display: block;
         position: absolute;
-        bottom: -7px;
+        top: -7px;
         height: 2px;
         width: 15px;
         background: $grey;
         left: -12px;
-        transform: rotate(-45deg);
+        transform: rotate(45deg);
       }
 
       &::after {
         content: '';
         display: block;
         position: absolute;
-        bottom: -7px;
+        top: -7px;
         height: 2px;
         width: 15px;
         background: $grey;
         right: -12px;
-        transform: rotate(45deg);
+        transform: rotate(-45deg);
       }
+
+      .border_helper{
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -7px;
+          height: 2px;
+          width: 15px;
+          background: $grey;
+          left: -12px;
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -7px;
+          height: 2px;
+          width: 15px;
+          background: $grey;
+          right: -12px;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  &--rwd{
+    .section__container{
+      border: none;
     }
   }
 }
@@ -550,7 +552,7 @@
   &__input, &__textarea, &__button {
     margin: 10px 10px;
     padding: 10px;
-    font-size: $font-size-base;
+    font-size: $font-size-small;
     width: 100%;
   }
 
@@ -558,18 +560,6 @@
     resize: vertical;
     height: 10rem;
   }
-
-  &__button {
-    background-color: $color-primary-light;
-    color: $white;
-    transition: $transition-fast;
-    border-radius: $rounded-small;
-
-    &:hover, &:active {
-      background-color: $color-primary-dark;
-    }
-  }
-
 
   &__alternative{
     width: 50%;

@@ -3,7 +3,7 @@
   padding: 6px 20px;
   background: $color-primary-base;
   color: #fefefe;
-  font-family: Roboto;
+  font-family: $font-primary;
   font-weight: 600;
   border-radius: $rounded-small;
   transition: $transition-fast;
@@ -16,6 +16,14 @@
   &.big{
     padding: 10px 25px;
     font-size: 1.2em;
+  }
+
+  &.light{
+    background: $color-primary-light;
+
+    &:hover{
+      background: $color-primary-dark;
+    }
   }
 
   &.inverted{

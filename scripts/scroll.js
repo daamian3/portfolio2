@@ -61,7 +61,7 @@ function scroll() {
       var $techBlocks = $(".tech__block");
       $techBlocks.each(function () {
         var currentBlock = $(this);
-        if (currentBlock.position().top - currentBlock.height() <= scrollPos && currentBlock.position().top + currentBlock.height() > scrollPos) {
+        if (currentBlock.position().top - currentBlock.height() <= scrollPos + $(window).height() / 3 && currentBlock.position().top + currentBlock.height() > scrollPos + $(window).height() / 3.5) {
           currentBlock.find("p").css({ "transform": "translateY(-50%) scale(1)" })
           currentBlock.find("i").css("opacity", 0);
         } else {
@@ -72,4 +72,3 @@ function scroll() {
     }
   }
 };
-
