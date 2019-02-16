@@ -5,7 +5,8 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Wierzymy, że własna witryna internetowa to istotny aspekt w dzisiejszych czasach, który niesie za sobą ogromne możliwości, poszerza horyzonty oraz pomaga dotrzeć do odbiorców. Prowadzisz biznes? Potrzebujesz portfolio? Zapraszamy!">
+  <meta name="description"
+    content="Wierzymy, że własna witryna internetowa to istotny aspekt w dzisiejszych czasach, który niesie za sobą ogromne możliwości, poszerza horyzonty oraz pomaga dotrzeć do odbiorców. Prowadzisz biznes? Potrzebujesz portfolio? Zapraszamy!">
   <link rel="stylesheet" href="style.min.css">
   <title>DM Webmasters | Stworzymy dla ciebie nowoczesną witrynę internetową</title>
 </head>
@@ -110,6 +111,9 @@
     </section>
 
     <section class="section section--rwd" id="rwd">
+      <div id="rwd-overlay">
+        <button class="overlay-close-btn">&times;</button>
+      </div>
       <div class="section__container">
         <h2 class="section__header">Resonsive Web Design</h2>
 
@@ -125,68 +129,71 @@
 
         <button class="button" id="rwd-button">Rozpocznij</button>
 
-        <h3 id="rwd-sign" class="rwd__sign">Komputer</h3>
+        <div class="rwd-overlay-content">
+          <h3 id="rwd-sign" class="rwd__sign">Komputer</h3>
 
-        <div id="rwd-container" class="rwd">
-          <div class="rwd__block rwd__block--alone"></div>
+          <div id="rwd-container" class="rwd">
+            <div class="rwd__block rwd__block--alone"></div>
 
-          <div class="rwd__container">
-            <div class="rwd__block rwd__block--triple"></div>
-            <div class="rwd__block rwd__block--triple"></div>
-            <div class="rwd__block rwd__block--triple"></div>
+            <div class="rwd__container">
+              <div class="rwd__block rwd__block--triple"></div>
+              <div class="rwd__block rwd__block--triple"></div>
+              <div class="rwd__block rwd__block--triple"></div>
+            </div>
+
+            <div class="rwd__block rwd__block--alone"></div>
+
+            <div class="rwd__container">
+              <div class="rwd__block rwd__block--double"></div>
+              <div class="rwd__block rwd__block--double"></div>
+            </div>
+
+            <div class="rwd__block rwd__block--alone"></div>
           </div>
-
-          <div class="rwd__block rwd__block--alone"></div>
-
-          <div class="rwd__container">
-            <div class="rwd__block rwd__block--double"></div>
-            <div class="rwd__block rwd__block--double"></div>
-          </div>
-
-          <div class="rwd__block rwd__block--alone"></div>
         </div>
+
       </div>
     </section>
 
     <section class="section services main-carousel" id="services">
-        <ul class="services__block carousel-cell">
-          <div class="services__container">
-            <li class="services__li services--title">One page</li>
-            <li class="services__li services--feature">Domena + hosting</li>
-            <li class="services__li services--feature">-</li>
-            <li class="services__li services--feature">-</li>
-            <li class="services__li services--feature">-</li>
-            <li class="services__li services--feature">-</li>
-            <li class="services__li services--price">od 200 zł</li>
-          </div>
-            <button class="button soft services__button">Naciśnij, aby zobaczyć przykładową stronę</button>
-        </ul>
+      <ul class="services__block carousel-cell">
+        <div class="services__container">
+          <li class="services__li services--title">One page</li>
+          <li class="services__li services--feature">Domena + hosting</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--price">od 200 zł</li>
+        </div>
+        <button class="button soft services__button">Naciśnij, aby zobaczyć przykładową stronę</button>
+      </ul>
 
-        <ul class="services__block carousel-cell">
-          <div class="services__container">
-            <li class="services__li services--title">Witryna</li>
-            <li class="services__li services--feature">Domena + hosting</li>
-            <li class="services__li services--feature">Podstrony</li>
-            <li class="services__li services--feature">-</li>
-            <li class="services__li services--feature">-</li>
-            <li class="services__li services--feature">-</li>
-            <li class="services__li services--price">od 300 zł</li>
-          </div>
-          <button class="button soft services__button">Naciśnij, aby zobaczyć przykładową stronę</button>
-        </ul>
+      <ul class="services__block carousel-cell">
+        <div class="services__container">
+          <li class="services__li services--title">Witryna</li>
+          <li class="services__li services--feature">Domena + hosting</li>
+          <li class="services__li services--feature">Podstrony</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--feature">-</li>
+          <li class="services__li services--price">od 300 zł</li>
+        </div>
+        <button class="button soft services__button">Naciśnij, aby zobaczyć przykładową stronę</button>
+      </ul>
 
-        <ul class="services__block carousel-cell">
-          <div class="services__container">
-            <li class="services__li services--title">Serwis</li>
-            <li class="services__li services--feature">Domena + hosting</li>
-            <li class="services__li services--feature">Podstrony</li>
-            <li class="services__li services--feature">Opcja edycji (CMS)</li>
-            <li class="services__li services--feature">Panel administratora</li>
-            <li class="services__li services--feature">Rejestracja & Logowanie</li>
-            <li class="services__li services--price">od 600 zł</li>
-          </div>
-          <button class="button soft services__button">Naciśnij, aby zobaczyć przykładową stronę</button>
-        </ul>
+      <ul class="services__block carousel-cell">
+        <div class="services__container">
+          <li class="services__li services--title">Serwis</li>
+          <li class="services__li services--feature">Domena + hosting</li>
+          <li class="services__li services--feature">Podstrony</li>
+          <li class="services__li services--feature">Opcja edycji (CMS)</li>
+          <li class="services__li services--feature">Panel administratora</li>
+          <li class="services__li services--feature">Rejestracja & Logowanie</li>
+          <li class="services__li services--price">od 600 zł</li>
+        </div>
+        <button class="button soft services__button">Naciśnij, aby zobaczyć przykładową stronę</button>
+      </ul>
     </section>
 
     <section class="section section--tech" id="tech">
@@ -299,7 +306,7 @@
     </section>
 
     <footer class="footer">
-      Portfolio | 2018
+      Portfolio | 2019
     </footer>
   </main>
   <script src="./app.bundle.min.js"></script>
