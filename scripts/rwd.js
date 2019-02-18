@@ -30,8 +30,8 @@ function rwd() {
   const $rwd_triple = $(".rwd__block--triple");
   // overlay constants
   const $overlay = $("#rwd-overlay");
-  const $overlay_content = $(".rwd-overlay-content");
-  const $overlay_close_button = $(".overlay-close-btn")
+  const $overlay_content = $(".rwd__overlay-content");
+  const $overlay_close_button = $(".overlay__close-btn")
 
   function resize(device, cb) {
     $rwd.animate({
@@ -55,9 +55,8 @@ function rwd() {
   let timeouts = [];
 
   function closeOverlay() {
-    $overlay_content.fadeOut(500).css('display', 'none');
-    $overlay_content.removeAttr('id');
-    $overlay.fadeOut(500).css('display', 'none');
+    $overlay_content.fadeOut(500);
+    $overlay.fadeOut(500);
   }
 
   function handleCloseButton() {
@@ -85,11 +84,6 @@ function rwd() {
     // show the overlay
     $overlay.fadeIn(500).css('display', 'block');
     $overlay_content.fadeIn(1000);
-    $overlay_content.attr('id', 'overlay-content');
-
-    $("html, body").animate({
-      scrollTop: $rwd.offset().top - $(window).height() / 2 + $rwd.height() / 2
-    })
 
     function resizeRwd(cb) {
       timeouts[0] = setTimeout(function () {
