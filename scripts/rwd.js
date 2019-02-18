@@ -57,13 +57,13 @@ function rwd() {
   function closeOverlay() {
     $overlay_content.fadeOut(500);
     $overlay.fadeOut(500);
+
+    setTimeout(function(){
+      resetDefault();
+    }, 500)
   }
 
-  function handleCloseButton() {
-    // clear timeouts
-    timeouts.forEach(timeout => clearTimeout(timeout));
-    $rwd.stop();
-    closeOverlay();
+  function resetDefault(){
     // reset css given by animation
     $rwd.css({
       width: width['desktop'],
@@ -74,6 +74,13 @@ function rwd() {
     $rwd_sign.text('Komputer');
 
     $rwd_button.attr('disabled', false);
+  }
+
+  function handleCloseButton() {
+    // clear timeouts
+    timeouts.forEach(timeout => clearTimeout(timeout));
+    $rwd.stop();
+    closeOverlay();
   }
 
   $overlay_close_button.on("click", handleCloseButton);

@@ -390,9 +390,19 @@
     z-index: 4;
 
     &-content {
-      display: none;
       text-align: center;
       color: $grey;
+      @include flexbox(column, center, center, no-wrap);
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      display: none;
     }
   }
 }
@@ -412,20 +422,6 @@
     padding: 5px;
     cursor: pointer;
   }
-}
-
-#overlay-content {
-  @include flexbox(column, center, center, no-wrap);
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  display: none;
 }
 
 .about{
