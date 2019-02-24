@@ -64,9 +64,11 @@ function scroll() {
         if (currentBlock.position().top - currentBlock.height() <= scrollPos + $(window).height() / 3 && currentBlock.position().top + currentBlock.height() > scrollPos + $(window).height() / 3.5) {
           currentBlock.find("p").css({ "transform": "translateY(-50%) scale(1)" })
           currentBlock.find("i").css("opacity", 0);
+          console.log('show');
         } else {
           currentBlock.find("p").css({ "transform": "translateY(50%) scale(0)" });
           currentBlock.find("i").css("opacity", 1);
+          console.log('hide');
         }
       })
     }

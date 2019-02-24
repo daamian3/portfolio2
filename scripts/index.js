@@ -6,10 +6,9 @@ $(document).ready(function () {
   scroll();
   rwd();
 
-  $('#services').flickity({
-    cellAlign: 'left',
-    contain: true
+  $(".owl-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    nav: true,
   });
 });
-
-
