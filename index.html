@@ -256,47 +256,40 @@
         <h2 class="section__header">Kontakt</h2>
         <p class="contact__helper">Jeżeli jesteś zainteresowany współpracą, skontaktuj się z nami:</p>
 
-        <div class="contact__flex">
-          <form class="contact__form">
+        <form class="contact__form">
 
-            <input class="contact__input" type="text" name="email" aria-label="email" placeholder="Email" />
-            <input class="contact__input" type="text" name="firstname" aria-label="firstname" placeholder="Imię" />
-            <input class="contact__input" type="text" name="lastname" aria-label="lastname" placeholder="Nazwisko" />
+          <input class="contact__input" type="text" name="email" aria-label="email" placeholder="Email" />
+          <input class="contact__input" type="text" name="firstname" aria-label="firstname" placeholder="Imię" />
+          <input class="contact__input" type="text" name="lastname" aria-label="lastname" placeholder="Nazwisko" />
 
-            <textarea class="contact__textarea"></textarea>
-            <button class="contact__button button" type="submit">Wyślij</button>
-          </form>
-
-          <div class="contact__alternative">
-            <div class="contact__alternative--flex">
-              <div class="contact__info">
-                <div>
-                  <p>
-                    <i class="fas fa-envelope contact__icon"></i> <span>contact@dmwebmasters.pl</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="social">
-              <div class="social__block">
-                <a class="social__link" href="#">
-                  <i class="social__icon fab fa-facebook"></i>
-                </a>
-              </div>
-              <div class="social__block">
-                <a class="social__link" href="#">
-                  <i class="social__icon fab fa-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+          <textarea class="contact__textarea"></textarea>
+          <button class="contact__button button" type="submit">Wyślij</button>
+        </form>
+  
       </div>
     </section>
 
     <footer class="footer">
-      Portfolio | 2019
+      <div class="footer__contact">
+        <p class="footer__email">
+          <i class="fas fa-envelope footer__icon"></i> <span>contact@dmwebmasters.pl</span>
+        </p>
+
+        <div class="social">
+          <div class="social__block">
+            <a class="social__link" href="#">
+              <i class="social__icon fab fa-facebook"></i>
+            </a>
+          </div>
+
+          <div class="social__block">
+            <a class="social__link" href="#">
+              <i class="social__icon fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <p>&copy; DMWebmasters | 2019</p>
     </footer>
   </main>
   <script src="./app.bundle.min.js"></script>

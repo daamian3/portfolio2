@@ -3,6 +3,10 @@ $(document).ready(function () {
     if (isMobile()) $('#menu-shower').prop('checked', false);
   });
 
+  $('header, section, footer').on('click', function(){
+    $('#menu-shower').prop('checked', false);
+  });
+
   scroll();
   rwd();
 

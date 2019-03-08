@@ -142,7 +142,6 @@
     position: absolute;
     bottom: 1em;
     opacity: 0.9;
-    box-shadow: $box-shadow-close;
     cursor: pointer;
     transition: $transition-fast;
     font-size: 2rem;
@@ -167,9 +166,29 @@
 .footer {
   @include padding-box();
   background-color: $color-secondary-light;
-  color: $white;
+  color: grey;
   text-align: center;
   @include padding-box('big');
+
+  &__contact{
+    @include flexbox(row, space-around, center);
+
+    @include media-query('phone'){
+      flex-direction: column;
+    }
+  }
+
+  &__icon{
+    margin-right: 1rem;
+  }
+
+  &__email{
+    width: 30%;
+
+    @include media-query('phone'){
+      width: 100%;
+    }
+  }
 }
 
 .menu {
@@ -435,7 +454,6 @@
 .services {
   background-color: $color-primary-dark;
   color: $white;
-  padding: 0 5rem;
 
   &__container{
     width: 50%;
@@ -448,7 +466,9 @@
     font-size: $font-size-base;
     text-align: center;
     transition: $transition-fast;
-    @include flexbox(row, space-around, center, wrap)
+    @include flexbox(row, space-around, center, wrap);
+    padding: 0 5rem;
+    width: 100vw;
   }
 
   &__li{
@@ -556,7 +576,6 @@
 }
 
 .contact {
-  padding: 3rem;
   text-align: center;
   margin-top: 2rem;
   font-size: $font-size-huge;
@@ -566,19 +585,16 @@
   background-repeat: no-repeat;
   background-attachment: fixed; // OPCJONALNE
 
-  @include media-query('phone') {
-    padding: 0;
-  }
-
   &__container {
-    max-width: 90%;
+    max-width: 100% !important;
     @include flexbox(column, center, center, wrap);
     background-color: rgba(255, 255, 255, .75);
     box-shadow: $box-shadow-far;
-    padding: 1rem;
+    padding: 2rem 1rem;
 
     @include media-query('phone') {
       box-shadow: inherit;
+      max-width: inherit;
     }
   }
 
@@ -611,41 +627,16 @@
     resize: vertical;
     height: 10rem;
   }
-
-  &__alternative{
-    width: 50%;
-    font-size: $font-size-base;
-    text-align: left;
-
-    @include media-query('phone'){
-      width: 90%;
-      text-align: center;
-      font-size: $font-size-big;
-    }
-
-    &--flex{
-      @include flexbox(column, space-between, center, wrap);
-    }
-  }
-
-  &__info{
-    margin: 1rem 0;
-    text-align: left;
-    @include flexbox(row, center, center, wrap);
-    @include media-query('phone'){
-      width: 100%;
-    }
-  }
-
-  &__icon{
-    margin-right: 1rem;
-  }
 }
 
 .social {
-  width: 100%;
-  padding: 2rem;
+  width: 30%;
+  @include padding-box('big');
   @include flexbox(row, space-around, center, wrap);
+
+  @include media-query('phone'){
+    width: 100%;
+  }
 
   &__icon {
     font-size: 2rem;
@@ -655,17 +646,6 @@
 
     @include media-query('phone'){
       font-size: 4rem;
-    }
-
-    &.fa-facebook {
-      color: #3b5998;
-    }
-
-    &.fa-instagram {
-      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
 
     &:hover{
